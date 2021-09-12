@@ -48,7 +48,7 @@ const UserRides = () => {
     const getUsers = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8000/rides/${uid}/tripStatus/`
+          `https://cabadminbackend.herokuapp.com/rides/${uid}/tripStatus/`
         );
         setRidesList(res.data);
       } catch (err) {
@@ -62,7 +62,7 @@ const UserRides = () => {
     console.log(rideId);
     try {
       await axios.post(
-        `http://localhost:8000/rides/${uid}/tripStatus/book/${rideId}/`
+        `https://cabadminbackend.herokuapp.com/rides/${uid}/tripStatus/book/${rideId}/`
       );
       window.location.reload();
     } catch (err) {
@@ -73,7 +73,7 @@ const UserRides = () => {
     console.log(rideId);
     try {
       await axios.post(
-        `http://localhost:8000/rides/${uid}/tripStatus/decline/${rideId}/`
+        `https://cabadminbackend.herokuapp.com/rides/${uid}/tripStatus/decline/${rideId}/`
       );
       window.location.reload();
     } catch (err) {

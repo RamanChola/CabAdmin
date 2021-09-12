@@ -47,7 +47,7 @@ const Home = () => {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/rides");
+        const res = await axios.get("https://cabadminbackend.herokuapp.com/rides");
         setUsersList(res.data);
       } catch (err) {
         console.log(err);
